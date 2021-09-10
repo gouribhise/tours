@@ -10,7 +10,8 @@ import './Tour.scss';
      })
    }
   render(){
-    const{city,img,name,info}=this.props.tour;
+    const{id, city,img,name,info}=this.props.tour;
+    const {removeTours}=this.props;
     return(
       <article className="tour">
       <div className="img-container">
@@ -18,7 +19,7 @@ import './Tour.scss';
 
            src={img}
            alt=""/>
-           <span className="close-btn">
+           <span className="close-btn" onClick={()=>{removeTours(id)}}>
            <i className="fas fa-window-close"/>
            </span>
       </div>
