@@ -1,6 +1,9 @@
 import React,{Component} from 'react'
 import './Tour.scss';
  export default class Tour extends Component{
+   state={
+     showInfo:false
+   }
   render(){
     const{city,img,name,info}=this.props.tour;
     return(
@@ -21,6 +24,7 @@ import './Tour.scss';
       <i className="fas fa-caret-square-down"/>
       </span>
       </h5>
+      {this.state.showInfo}
       <p>{info}      </p>
 
       </div>
